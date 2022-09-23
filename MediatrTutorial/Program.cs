@@ -1,5 +1,7 @@
 var builder = WebApplication.CreateBuilder(args);
 
+builder.Services.AddMediatR(Assembly.GetExecutingAssembly());
+
 builder.Services.AddControllers();
 
 builder.Services.AddEndpointsApiExplorer();
