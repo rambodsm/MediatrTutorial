@@ -1,21 +1,27 @@
 var builder = WebApplication.CreateBuilder(args);
 
-builder.Services.AddMediatR(Assembly.GetExecutingAssembly());
+builder.AddDatabaseConfiguration();
 
-builder.Services.AddControllers();
+builder.AddMediatrConfiguration();
 
-builder.Services.AddEndpointsApiExplorer();
+builder.AddControllerConfiguration();
 
-builder.Services.AddSwaggerGen();
+builder.AddSwaggerConfiguration();
 
-var app = builder.Build();
+builder.AddCorsConfiguration();
 
-app.UseSwagger();
+var application = builder.Build();
 
-app.UseSwaggerUI();
+application.UseMiddleware<ExceptionHandlerFilter>();
 
-app.UseHttpsRedirection();
+// application.UseDeveloperExceptionPage();
 
-app.MapControllers();
+application.UseSwagger();
 
-app.Run();
+application.UseSwaggerUI();
+
+application.UseHttpsRedirection();
+
+application.MapControllers();
+
+application.Run();
