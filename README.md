@@ -11,3 +11,13 @@ CQRS implementation in ASP.NET Core using MediatR library in .NET 6
 * [MediatR](https://github.com/jbogard/MediatR) - Mediator implementation in .NET
 * [Swashbuckle.AspNetCore](https://github.com/domaindrivendev/Swashbuckle.AspNetCore) - Swagger for api document
 * [FluentValidation](https://github.com/JeremySkinner/FluentValidation) - A validation library for .NET that uses fluent interfaces for building validation rules.
+
+## ⌨️ Getting Started
+
+1. Install the latest [.NET 6 SDK](https://dotnet.microsoft.com/download/dotnet/6.0)
+2. For start the project, run the following command in root directory
+
+
+```
+dotnet run
+```
