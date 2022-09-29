@@ -1,4 +1,6 @@
 # MediatrTutorial
+[![CQRS-IMG](./cqrs-image.jpeg)](#)
+</br>
 CQRS implementation in ASP.NET Core using MediatR library in .NET 6
 
 
